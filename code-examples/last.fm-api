@@ -1,0 +1,9 @@
+import requests
+
+apikey = '58846e1b2ea8652926535729c9d3b4f4'
+country = 'spain'
+url = f'https://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country={country}&api_key={apikey}&format=json&limit=5'
+
+response = requests.get(url)
+content = response.json()
+print(content)
